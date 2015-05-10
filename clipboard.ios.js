@@ -1,0 +1,25 @@
+exports.setText = function (content) {
+  return new Promise(function (resolve, reject) {
+    try {
+      var pasteboard = UIPasteboard.generalPasteboard();
+      pasteboard.setValueForPasteboardType(content, kUTTypePlainText);
+      resolve();
+    } catch (ex) {
+      console.log("Error in clipboard.setText: " + ex);
+      reject(ex);
+    }
+  });
+};
+
+exports.getText = function () {
+  return new Promise(function (resolve, reject) {
+    try {
+      var pasteboard = UIPasteboard.generalPasteboard();
+      var content = pasteboard.valueForPasteboardType(kUTTypePlainText);
+      resolve(content);
+    } catch (ex) {
+      console.log("Error in clipboard.getText: " + ex);
+      reject(ex);
+    }
+  });
+};
