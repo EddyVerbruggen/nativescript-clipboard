@@ -14,7 +14,7 @@ tns plugin add nativescript-clipboard
 To use this plugin you must first require() it:
 
 ```js
-var insomnia = require("nativescript-clipboard");
+var clipboard = require("nativescript-clipboard");
 ```
 
 ### setText
