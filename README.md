@@ -1,21 +1,25 @@
 # NativeScript Clipboard
 
-A NativeScript module to copy and paste data to and from the device clipboard.
+A NativeScript plugin to copy and paste data from and to the device clipboard.
 
 ## Installation
 From the command prompt go to your app's `app` folder and execute:
 
 ```
-npm install nativescript-clipboard
+tns plugin add nativescript-clipboard
 ```
 
 ## Usage
 
+To use this plugin you must first require() it:
+
+```js
+var insomnia = require("nativescript-clipboard");
+```
+
 ### setText
 
 ```js
-  var clipboard = require( "./node_modules/nativescript-clipboard/clipboard" );
-
   clipboard.setText("Something relevant to put on the clipboard.").then(function() {
       console.log("OK, copied to the clipboard");
   })
@@ -24,10 +28,8 @@ npm install nativescript-clipboard
 ### getText
 
 ```js
-  var clipboard = require( "./node_modules/nativescript-clipboard/clipboard" );
-
   clipboard.getText().then(function(content) {
-      alert("Read from clipboard: " + content);
+      console.log("Read from clipboard: " + content);
   })
 ```
 

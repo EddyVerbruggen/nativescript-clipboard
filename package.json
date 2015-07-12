@@ -1,27 +1,28 @@
 {
   "name": "nativescript-clipboard",
-  "version": "1.0.0",
-  "description": "A clipboard module for use in NativeScript apps. It currently supports copying and pasting text from and to the clipboard.",
+  "version": "1.1.0",
+  "description": "A clipboard module for use in NativeScript apps. You can copy and paste text from and to the clipboard.",
   "main": "clipboard.js",
+  "nativescript": {
+    "platforms": {
+      "ios": "1.1.0",
+      "android": "1.1.0"
+    }
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eddyverbruggen/nativescript-clipboard.git"
+    "url": "https://github.com/eddyverbruggen/nativescript-clipboard.git"
   },
   "keywords": [
-    "NativeScript"
+    "NativeScript",
+    "Clipboard",
+    "Pasteboard",
+    "Copy",
+    "Paste",
+    "Copy-Paste"
   ],
-  "author": {
-    "name": "Eddy Verbruggen",
-    "email": "eddyverbruggen@gmail.com",
-    "url": "http://x-services.nl/"
-  },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/eddyverbruggen/nativescript-clipboard/blob/master/LICENSE"
-  },
-  "bugs": {
-    "url": "https://github.com/eddyverbruggen/nativescript-clipboard/issues"
-  },
-  "homepage": "https://github.com/eddyverbruggen/nativescript-clipboard",
-  "readmeFilename": "README.md"
+  "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
+  "license": "MIT",
+  "bugs": "https://github.com/eddyverbruggen/nativescript-clipboard/issues",
+  "homepage": "https://github.com/eddyverbruggen/nativescript-clipboard"
 }
