@@ -3,7 +3,7 @@
 A NativeScript plugin to copy and paste data from and to the device clipboard.
 
 ## Installation
-From the command prompt go to your app's `app` folder and execute:
+Run the following command from the root of your project:
 
 ```
 tns plugin add nativescript-clipboard
