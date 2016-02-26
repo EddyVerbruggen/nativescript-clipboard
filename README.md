@@ -34,4 +34,4 @@ var clipboard = require("nativescript-clipboard");
 ```
 
 ## Future work
-Implement support for storing data (image, etc) on the clipboard.
+Implement support for storing data (image, etc) on the clipboard. Open an issue or PR in case you like to have that.
