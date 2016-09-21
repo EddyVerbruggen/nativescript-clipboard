@@ -1,7 +1,9 @@
+var utils = require("utils/utils");
+
 exports.setText = function (content) {
   return new Promise(function (resolve, reject) {
     try {
-      var pasteboard = UIPasteboard.generalPasteboard();
+      var pasteboard = utils.ios.getter(UIPasteboard, UIPasteboard.generalPasteboard);
       pasteboard.setValueForPasteboardType(content, kUTTypePlainText);
       resolve();
     } catch (ex) {
@@ -14,7 +16,7 @@ exports.setText = function (content) {
 exports.getText = function () {
   return new Promise(function (resolve, reject) {
     try {
-      var pasteboard = UIPasteboard.generalPasteboard();
+      var pasteboard = utils.ios.getter(UIPasteboard, UIPasteboard.generalPasteboard);
       var content = pasteboard.valueForPasteboardType(kUTTypePlainText);
       resolve(content);
     } catch (ex) {
