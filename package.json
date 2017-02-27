@@ -1,8 +1,9 @@
 {
   "name": "nativescript-clipboard",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A clipboard plugin for use in NativeScript apps. You can copy and paste text from and to the clipboard.",
   "main": "clipboard",
+  "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
       "ios": "2.3.0",
