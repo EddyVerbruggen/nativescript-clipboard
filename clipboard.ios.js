@@ -17,7 +17,7 @@ exports.getText = function () {
   return new Promise(function (resolve, reject) {
     try {
       var pasteboard = utils.ios.getter(UIPasteboard, UIPasteboard.generalPasteboard);
-      var content = pasteboard.valueForPasteboardType(kUTTypePlainText);
+      var content = pasteboard.string || pasteboard.valueForPasteboardType(kUTTypePlainText);
       resolve(content);
     } catch (ex) {
       console.log("Error in clipboard.getText: " + ex);
