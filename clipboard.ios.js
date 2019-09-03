@@ -3,7 +3,7 @@ var utils = require("utils/utils");
 exports.setText = function (content) {
   return new Promise(function (resolve, reject) {
     try {
-      var pasteboard = utils.ios.getter(UIPasteboard, UIPasteboard.generalPasteboard);
+      var pasteboard = UIPasteboard.generalPasteboard;
       pasteboard.setValueForPasteboardType(content, kUTTypePlainText);
       resolve();
     } catch (ex) {
@@ -16,7 +16,7 @@ exports.setText = function (content) {
 exports.getText = function () {
   return new Promise(function (resolve, reject) {
     try {
-      var pasteboard = utils.ios.getter(UIPasteboard, UIPasteboard.generalPasteboard);
+      var pasteboard = UIPasteboard.generalPasteboard;
       var content = pasteboard.string || pasteboard.valueForPasteboardType(kUTTypePlainText);
       resolve(content);
     } catch (ex) {
