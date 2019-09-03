@@ -1,5 +1,3 @@
-var utils = require("utils/utils");
-
 exports.setText = function (content) {
   return new Promise(function (resolve, reject) {
     try {

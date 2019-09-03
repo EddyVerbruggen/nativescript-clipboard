@@ -1,4 +1,4 @@
-var application = require("application");
+var application = require("tns-core-modules/application");
 
 var _context;
 function getContext() {

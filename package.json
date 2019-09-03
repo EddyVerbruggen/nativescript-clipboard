@@ -1,6 +1,6 @@
 {
   "name": "nativescript-clipboard",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "A clipboard plugin for use in NativeScript apps. You can copy and paste text from and to the clipboard.",
   "main": "clipboard",
   "typings": "index.d.ts",
@@ -22,6 +22,10 @@
     "Paste",
     "Copy-Paste"
   ],
+  "devDependencies": {
+    "tns-core-modules": "~6.0.7",
+    "tns-platform-declarations": "~6.0.7"
+  },
   "author": "Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
   "license": "MIT",
   "bugs": "https://github.com/eddyverbruggen/nativescript-clipboard/issues",
