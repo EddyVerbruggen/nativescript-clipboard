@@ -1,0 +1,20 @@
+<Page class="page"
+      navigatingTo="onNavigatingTo"
+      xmlns="http://schemas.nativescript.org/tns.xsd">
+
+  <ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Clipboard plugin demo"/>
+  </ActionBar>
+
+  <StackLayout>
+    <Label text="Asynchronous API" class="section-header"/>
+    <Button text="Set Text" tap="{{setTextAsync}}"/>
+    <Button text="Get Text" tap="{{getTextAsync}}"/>
+
+    <Label text="Synchronous API" class="section-header"/>
+    <Button text="Set Text" tap="{{setTextSync}}"/>
+    <Button text="Get Text" tap="{{getTextSync}}"/>
+
+    <Label text="{{clipboardText}}" class="clipboard-text" textWrap="true"/>
+  </StackLayout>
+</Page>

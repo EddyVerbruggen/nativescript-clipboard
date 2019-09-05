@@ -1,0 +1,7 @@
+*.map
+*.ts
+!*.d.ts
+references.d.ts
+tsconfig.json
+scripts/*
+.DS_Store

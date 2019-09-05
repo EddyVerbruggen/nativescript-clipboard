@@ -1,0 +1,20 @@
+﻿@import '~nativescript-theme-core/css/core.light.css';
+
+Button {
+  margin: 20 20 0 20;
+  padding: 20;
+  font-size: 16;
+}
+
+Label.section-header {
+  padding: 60 20 0 20;
+  font-size: 20;
+  font-weight: bold;
+}
+
+Label.clipboard-text {
+  padding: 60 20 0 20;
+  font-size: 16;
+  font-weight: bold;
+  color: coral;
+}
