@@ -21,6 +21,8 @@ tns plugin add nativescript-clipboard
 
 ## Usage
 
+> TIP: Check out the [demo app](/demo) for TypeScript examples.
+
 To use this plugin you must first require() it:
 
 ```js
@@ -35,12 +37,27 @@ var clipboard = require("nativescript-clipboard");
   })
 ```
 
+### setTextSync
+This is the synchronous version of `setText`, available since plugin version 1.2.0.
+
+```js
+  clipboard.setTextSync("Something relevant to put on the clipboard.");
+```
+
 ### getText
 
 ```js
   clipboard.getText().then(function(content) {
       console.log("Read from clipboard: " + content);
   })
+```
+
+### getTextSync
+This is the synchronous version of `getText`, available since plugin version 1.2.0.
+
+```js
+  var content = clipboard.getText();
+  console.log("Read from clipboard: " + content);
 ```
 
 ## Future work
