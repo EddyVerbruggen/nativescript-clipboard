@@ -1,12 +1,17 @@
 # NativeScript Clipboard
 
+[![Build Status][build-status]][build-url]
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
+[![TotalDownloads][total-downloads-image]][npm-url]
 [![Twitter Follow][twitter-image]][twitter-url]
 
+[build-status]:https://travis-ci.org/EddyVerbruggen/nativescript-clipboard.svg?branch=master
+[build-url]:https://travis-ci.org/EddyVerbruggen/nativescript-clipboard
 [npm-image]:http://img.shields.io/npm/v/nativescript-clipboard.svg
 [npm-url]:https://npmjs.org/package/nativescript-clipboard
 [downloads-image]:http://img.shields.io/npm/dm/nativescript-clipboard.svg
+[total-downloads-image]:http://img.shields.io/npm/dt/nativescript-clipboard.svg?label=total%20downloads
 [twitter-image]:https://img.shields.io/twitter/follow/eddyverbruggen.svg?style=social&label=Follow%20me
 [twitter-url]:https://twitter.com/eddyverbruggen
 
