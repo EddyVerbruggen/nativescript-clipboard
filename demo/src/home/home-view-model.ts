@@ -1,5 +1,5 @@
-import { Observable } from "tns-core-modules/data/observable";
-import { getText, setText, getTextSync, setTextSync } from "nativescript-clipboard";
+import { Observable } from "@nativescript/core";
+import { getText, getTextSync, setText, setTextSync } from "nativescript-clipboard";
 
 export class HomeViewModel extends Observable {
     public clipboardText: string;

@@ -17,6 +17,8 @@
 
 A NativeScript plugin to copy and paste data from and to the device clipboard.
 
+> 💡 Plugin version 2.0.0+ is compatible with NativeScript 7+. If you need to target older NativeScript versions, please stick to plugin version 1.2.0.
+
 ## Installation
 Run the following command from the root of your project:
 

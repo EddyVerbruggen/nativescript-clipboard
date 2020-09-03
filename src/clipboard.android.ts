@@ -1,7 +1,7 @@
-import * as utils from "tns-core-modules/utils/utils";
+import { Utils } from "@nativescript/core";
 
 const writeToClipboard = (content: string): void => {
-  const clipboard = utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
+  const clipboard = Utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
   const clip = android.content.ClipData.newPlainText("App clipboard data", content);
   clipboard.setPrimaryClip(clip);
 };
@@ -13,7 +13,7 @@ const readFromClipboard = (clipboard): string => {
 };
 
 export function setText(content: string): Promise<void> {
-  return new Promise<void>(function (resolve, reject) {
+  return new Promise<void>((resolve, reject) => {
     try {
       writeToClipboard(content);
       resolve();
@@ -35,7 +35,7 @@ export function setTextSync(content: string): void {
 export function getText(): Promise<string> {
   return new Promise<string>((resolve, reject) => {
     try {
-      const clipboard = utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
+      const clipboard = Utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
       if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN)) {
         reject("No compatible clipboard content found");
       } else {
@@ -50,7 +50,7 @@ export function getText(): Promise<string> {
 
 export function getTextSync(): string {
   try {
-    const clipboard = utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
+    const clipboard = Utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
     if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN)) {
       console.log("No compatible clipboard content found");
       return "";
