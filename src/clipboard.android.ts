@@ -36,7 +36,8 @@ export function getText(): Promise<string> {
   return new Promise<string>((resolve, reject) => {
     try {
       const clipboard = Utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
-      if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN)) {
+      if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN) &&
+          !clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_HTML)) {
         reject("No compatible clipboard content found");
       } else {
         resolve(readFromClipboard(clipboard));
@@ -51,7 +52,8 @@ export function getText(): Promise<string> {
 export function getTextSync(): string {
   try {
     const clipboard = Utils.ad.getApplicationContext().getSystemService(android.content.Context.CLIPBOARD_SERVICE);
-    if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN)) {
+    if (!clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_PLAIN) &&
+        !clipboard.getPrimaryClipDescription().hasMimeType(android.content.ClipDescription.MIMETYPE_TEXT_HTML)) {
       console.log("No compatible clipboard content found");
       return "";
     } else {
