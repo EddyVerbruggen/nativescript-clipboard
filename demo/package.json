@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@nativescript/ios": "7.0.0",
-    "@nativescript/webpack": "3.0.0",
+    "@nativescript/webpack": "5.0.12",
     "typescript": "~3.9.7"
   },
   "gitHead": "9475c272a4c74ea6baf24d578bdf46c23a400fea",
